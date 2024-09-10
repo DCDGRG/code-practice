@@ -66,7 +66,9 @@ int main()
     while (cin)
     {
         int n;
-        cin >> n;
+        //cin >> n 也已经在这个判断中执行了
+        if (!(cin >> n)) break;  // 如果输入无效，退出循环
+
         // 先将一个数插入到链表中, 当作头节点，利于之后操作
         int value;
         cin >> value;
@@ -81,7 +83,7 @@ int main()
             current = current->NextNode;
         }
         //
-        printList(head);
+        //printList(head);
 
         int k;
         cin >> k;
